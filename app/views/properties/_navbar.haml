@@ -1,0 +1,9 @@
+.navbar
+	.navbar_inner
+		= link_to 'Properties Home', properties_path
+		= link_to 'Architecture Properties', edit_architecture_properties_path
+		= link_to 'Interior Design Properties', edit_interior_design_properties_path
+		= link_to 'Renovations', edit_renovations_properties_path
+		= link_to 'Additions', edit_additions_properties_path
+		= link_to 'Works In Progress', edit_works_in_progress_properties_path
+	= link_to image_tag('/assets/settings.png', height: '35px'), settings_user_path(current_user), title: 'Settings', class: 'settings_link'

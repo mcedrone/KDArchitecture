@@ -1,0 +1,14 @@
+- content_for :title, 'New Property'
+= render partial: 'navbar'
+.new_property_form
+	%h1.centered New Property
+	= form_for @property do |f|
+		.field
+			= f.label "Category: "
+			= f.select :category_id, options_for_select(Property::CATEGORIES.each_with_index.map {|name, index| [name,index]}, selected: params[:category_id])
+		.field
+			= f.text_field :name, value: @property.name, placeholder: 'Name'
+		.field
+			= f.text_area :description, value: @property.description, placeholder: 'Enter description'
+		.field.centered
+			= f.submit 'Save Property'

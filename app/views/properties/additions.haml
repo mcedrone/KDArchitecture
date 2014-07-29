@@ -1,0 +1,19 @@
+-content_for :title, 'Additions'
+.property_viewer_wrap{style: 'height: 100%'}
+	%ul.menu.black_menu
+		.menu_logo
+			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			%br
+			ARCHITECTURE & INTERIORS
+		%li= link_to 'Architecture', '/architecture'
+		%li= link_to 'Interior Design', '/interior_design'
+		%li= link_to 'Renovations', '/renovations'
+		%li= link_to 'Additions', '/additions'
+		%li= link_to 'Works In Progress', '/works_in_progress'
+
+%footer.black_footer
+	%ul#footer_menu
+	%li= link_to 'About', "/about"
+	%li= link_to 'Recognition', "/recognition"
+	%li= link_to 'Affiliates', "/affiliates"
+	%li= link_to 'Contact', "/contact"

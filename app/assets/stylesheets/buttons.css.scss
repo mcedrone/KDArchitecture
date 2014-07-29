@@ -1,0 +1,46 @@
+
+.github_button {
+	padding: 0 10px;
+	line-height: 24px;
+	background-color: #eeeeee;
+	background-image: -moz-linear-gradient(#fcfcfc, #eee);
+	background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+	background-image: linear-gradient(#fcfcfc, #eee);
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+}
+.github_button:hover {
+	background-image: linear-gradient(#eee, #ddd);
+	background-repeat: repeat-x;
+	border-color: #ccc;
+	color: black;
+}
+.green_gh_btn {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #60b044;
+	background-image: -moz-linear-gradient(#8add6d, #60b044);
+	background-image: -webkit-linear-gradient(#8add6d, #60b044);
+	background-image: linear-gradient(#8add6d, #60b044);
+	background-repeat: repeat-x;
+	border-color: #5ca941;
+}
+.green_gh_btn:hover {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #569e3d;
+	background-image: -moz-linear-gradient(#79d858, #569e3d);
+	background-image: -webkit-linear-gradient(#79d858, #569e3d);
+	background-image: linear-gradient(#79d858, #569e3d);
+	background-repeat: repeat-x;
+	border-color: #4a993e;
+}

@@ -1,0 +1,13 @@
+- content_for :title, 'Admin Settings'
+= render partial: 'properties/navbar'
+.dashboard
+	%h2 Admin Settings
+	%hr
+	= form_for @user do |f|
+		Update User
+		= f.text_field :name, placeholder: 'Name'
+		= f.password_field :password, placeholder: 'Password'
+		= f.password_field :password_confirmation, placeholder: 'Confirm password'
+		= f.submit 'Update!'
+
+	= link_to 'Sign Out', signout_path, method: :delete

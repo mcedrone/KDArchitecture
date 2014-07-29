@@ -1,0 +1,21 @@
+- content_for :title, 'Edit Additions'
+= render partial: 'navbar'
+.dashboard
+	.dashboard_top
+		%h2.left.inline Edit Additions
+		.view_selector
+			= image_tag '/assets/show_list.png', size: '25x25', class: 'list_view_icon', title: 'List View'
+			= image_tag '/assets/show_images.jpg', size: '30x30', class: 'images_view_icon', title: 'Full View'
+		.new_property_link_container
+			= link_to 'New Property', new_property_path(category_id: @category_id), title: 'New Property', class: 'github_button green_gh_btn'
+	%hr
+	- @properties.each do |property|
+		%hr
+		= property.name
+		= link_to 'Edit', edit_property_path(property), title: 'Edit Property', class: 'github_button'
+		%br
+		.full_view_div
+			= property.description
+			- cover = property.photos.first
+			-if cover
+				.edit_property_image= image_tag "#{cover.filename}", height: '200px'

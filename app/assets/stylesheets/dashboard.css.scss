@@ -1,0 +1,126 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menu {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10px;
+	list-style-type: none;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 35px;
+	font-size: 14px;
+	.menu_logo {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+	li {
+		display: inline-block;
+		border: 0;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	a {
+		font-family: "proxima-nova", Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 2px;
+		-o-transition:color .4s ease-out, background 1s ease-in;
+		-ms-transition:color .4s ease-out, background 1s ease-in;
+		-moz-transition:color .4s ease-out, background 1s ease-in;
+		-webkit-transition:color .4s ease-out, background 1s ease-in;
+		transition:color .4s ease-out, background 1s ease-in;
+	}
+	a:hover {
+		background: none;
+		color: gold;
+	}
+}
+
+.black_menu {
+	color: black;
+	.menu_logo {
+		border-bottom: 1px solid black;
+	}
+	a {
+		color: black;
+	}
+	a:hover {
+		color: gold;
+	}
+}
+
+.white_menu {
+	color: white;
+	.menu_logo {
+		border-bottom: 1px solid white;
+	}
+	a {
+		color: white;
+	}
+	a:hover {
+		color: gold;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+footer {
+	position: relative;
+	z-index: 1;
+	margin-top: -41px;
+	clear: both;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-transform: uppercase;
+	list-style-type: none;
+	text-align: center;
+	a {
+		letter-spacing: 2px;
+		-o-transition:color .4s ease-out, background 1s ease-in;
+		-ms-transition:color .4s ease-out, background 1s ease-in;
+		-moz-transition:color .4s ease-out, background 1s ease-in;
+		-webkit-transition:color .4s ease-out, background 1s ease-in;
+		transition:color .4s ease-out, background 1s ease-in;
+	}
+	a:hover {
+		background: none;
+		color: gold;
+	}
+	li {
+		display: inline-block;
+		border: 0;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.top_bah {
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
+		border-top: 1px solid white;
+	}
+}
+
+footer.black_footer {
+	color: black;
+	a {
+		color: black;
+	}
+	a:hover {
+		color: gold;
+	}
+}
+
+footer.white_footer {
+	color: white;
+	a {
+		color: white;
+	}
+	a:hover {
+		color: gold;
+	}
+}

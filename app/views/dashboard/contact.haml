@@ -1,0 +1,24 @@
+- content_for :title, 'Contact'
+%ul.menu.black_menu.absolute
+	.menu_logo
+		= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+		%br
+		ARCHITECTURE & INTERIORS
+	%li= link_to 'Architecture', '/architecture'
+	%li= link_to 'Interior Design', '/interior_design'
+	%li= link_to 'Renovations', '/renovations'
+	%li= link_to 'Additions', '/additions'
+	%li= link_to 'Works In Progress', '/works_in_progress'
+
+#contact_div
+
+%ul#contact_background
+	/ %li= image_tag 'duck_logo_white.png', height: "100%", width: "100%"
+
+%footer.black_footer
+	%ul#footer_menu
+	.top_bah
+	%li= link_to 'About', "/about"
+	%li= link_to 'Recognition', "/recognition"
+	%li= link_to 'Affiliates', "/affiliates"
+	%li= link_to 'Contact', "/contact"

@@ -1,0 +1,138 @@
+// Place all the styles related to the Properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dashboard {
+	width: 875px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
+}
+.dashboard_top {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.navbar {
+	text-align:center;
+	background: #e5e5e5;
+	width: 100%;
+	height: 45px;
+	overflow: auto;
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: -webkit-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: linear-gradient(#f9f9f9, #f3f3f3);
+	background-repeat: repeat-x;
+	text-shadow: 0 1px 0 #fff;
+	border-bottom: 1px solid #e5e5e5;
+	min-width: 1000px;
+	margin-bottom: 25px;
+	a {
+		padding-left: 30px;
+		padding-right: 30px;
+		line-height: 45px;
+		font-size: 15px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	a:hover {
+		background: none;
+	}
+	.navbar_inner {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.settings_link {
+		float: right;
+		margin-top: -40px;
+		height: 35px;
+	}
+}
+
+.view_selector {
+	float: right;
+	display: inline-block;
+}
+.list_view_icon:hover, .images_view_icon:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+.list_view_icon {
+	margin-bottom: 2px;
+	margin-right: 3px;
+}
+
+
+.new_property_link_container {
+	float: right;
+	display: inline-block;
+	a {
+		margin: 3px;
+		margin-right: 50px;
+	}
+}
+
+.edit_property_form, .edit_photo_form, .new_property_form, .new_photo_form {
+	margin-left: 13%;
+	margin-right: 13%;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 2%;
+	h1 {
+		margin-bottom: 15px;
+	}
+	.field {
+		padding-left: 20px;
+		padding-top: 15px;
+		label {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+		input, a.delete_property {
+			width: 90%;
+			padding: 6px 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			outline: none;
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+		}
+		a.delete_property {
+			background-image: linear-gradient(#f4f4f4, #ececec);
+			border-radius: 3px;
+		}
+		a.delete_property:hover {
+			background-image: linear-gradient(#EB0B00, #FF0C00);
+			border-radius: 5px;
+			color: white;
+		}
+		textarea {
+			width: 90%;
+			padding: 6px 10px;
+			font-size: 16px;
+			display: block;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			outline: none;
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+			margin-bottom: 35px;
+			resize: none;
+			height: 200px;
+		}
+	}
+	img:hover {
+		opacity: 0.5;
+	}
+	.left_box {
+		float: left;
+		width: 60%;
+	}
+	.right_box {
+		float: right;
+		width: 40%;
+	}
+	.edit_property_images {
+		clear: both;
+	}
+}

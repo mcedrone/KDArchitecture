@@ -1,0 +1,11 @@
+- content_for :title, 'Sign In'
+#signin_form
+	.field
+		%b DUCKHAM
+	= form_for(:session, url: sessions_path) do |f|
+		.field
+			= f.text_field :name, placeholder: 'Username', required: true
+		.field
+			= f.password_field :password, placeholder: 'Password', required: true
+		.actions
+			= f.submit 'Sign In'
