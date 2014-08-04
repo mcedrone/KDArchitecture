@@ -11,7 +11,7 @@
 	%li= link_to 'Works In Progress', '/works_in_progress'
 
 %ul#slideshow
-	- @background_images.each do |image|
+	- @bg_images.each do |image|
 		%li
 			= image_tag "#{image.filename}", height: "100%", width: "100%"
 

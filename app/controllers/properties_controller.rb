@@ -5,6 +5,12 @@ class PropertiesController < ApplicationController
                                                    :edit_additions, :edit_renovations, :edit_works_in_progress]
 
 	def index
+		@photo = Photo.new
+		@home_bgs = Photo.where(page_id: 0)
+		@about_bg = Photo.where(page_id: 1).first
+		@recognition_bg = Photo.where(page_id: 2).first
+		@affiliates_bg = Photo.where(page_id: 3).first
+		@contact_bg = Photo.where(page_id: 4).first
 	end
 
 	def show
@@ -32,7 +38,7 @@ class PropertiesController < ApplicationController
 	def update
 		respond_to do |format|
 			if @property.update(property_params)
-				format.html { redirect_to @property, notice: 'Property was successfully updated.' }
+				format.html { redirect_to edit_property_path(@property), notice: 'Property was successfully updated.' }
 			else
 				format.html { render action: 'edit' }
 			end

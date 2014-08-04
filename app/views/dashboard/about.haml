@@ -19,8 +19,9 @@
 	%br
 	The architectural design team is lead by Kent Duckham, principal. Kent’s leadership and experience is evident in all aspects of the home design and building process. The interior design team is lead by Alina Duckham, who brings sophisticated design and classic style to both collaborative and independent projects.
 
-/ %ul#about_background
-/ 	%li= image_tag 'duck_logo_white.png', height: "100%", width: "100%"
+%ul#about_background
+	-if @bg_image
+		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'
 
 %footer.black_footer
 	%ul#footer_menu

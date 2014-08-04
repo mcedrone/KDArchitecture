@@ -1,0 +1,19 @@
+-content_for :title, "Edit #{@property.name}"
+= render partial: 'navbar'
+.edit_property_form
+	.right= link_to 'Add Photo', new_photo_path(property_id: @property.id), class: 'github_button green_gh_btn'
+	%h1.centered= "Edit #{@property.name}"
+	= form_for @property do |f|
+		.field
+			= f.label "Category: "
+			= f.select :category_id, options_for_select(Property::CATEGORIES.each_with_index.map {|name, index| [name,index]}, selected: @property.category_id)
+		.field
+			= f.text_field :name, value: @property.name, placeholder: 'Name'
+		.field
+			= f.text_area :description, value: @property.description, placeholder: 'Enter description'
+		.field.centered
+			= f.submit 'Save Property'
+	.edit_property_photos_div
+		Photos:
+		- @property.photos.each do |photo|
+			= link_to (image_tag "#{photo.filename}", height: '100px'), edit_photo_path(photo)

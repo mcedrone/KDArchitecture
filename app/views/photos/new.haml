@@ -1,0 +1,14 @@
+- content_for :title, 'New Photo'
+= render partial: 'properties/navbar'
+.new_photo_form
+	%h1.centered New Photo
+	= form_for @photo do |f|
+		.field
+			= f.file_field :filename
+		.field
+			= f.text_field :name, placeholder: 'Name'
+		.field
+			= f.text_area :description, placeholder: 'Enter Description'
+		.field.centered
+			= f.hidden_field :property_id, value: params[:property_id]
+			= f.submit 'Save Photo'

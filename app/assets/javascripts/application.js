@@ -16,6 +16,16 @@
 //= require_tree .
 
 var ready = function(){
+	$('.dashboard_top').on('click', '#add_background', function(e){
+		e.preventDefault();
+		$('.new_background_wrapper').show();
+	});
+	
+	$('.new_background_wrapper').on('click', '#close_add_background', function(e){
+		e.preventDefault();
+		$('.new_background_wrapper').hide();
+	})
+
 	//fades in all pages to avoid Flash of Unstyled Content (FOUC)
 	$('.main_container').fadeIn(500);
 };

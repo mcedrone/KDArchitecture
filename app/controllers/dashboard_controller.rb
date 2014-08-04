@@ -1,23 +1,23 @@
 class DashboardController < ApplicationController
 
 	def home
-		@background_images = []
+		@bg_images = Photo.where(page_id: 0)
 	end
 
 	def about
-		@background_image = []
-	end
-
-	def contact
-		@background_image = []
+		@bg_image = Photo.where(page_id: 1).first
 	end
 
 	def recognition
-		@background_image = []
+		@bg_image = Photo.where(page_id: 2).first
 	end
 
 	def affiliates
-		@background_image = []
+		@bg_image = Photo.where(page_id: 3).first
+	end
+
+	def contact
+		@bg_image = Photo.where(page_id: 4).first
 	end
 
 end

@@ -74,11 +74,13 @@
 }
 
 .edit_property_form, .edit_photo_form, .new_property_form, .new_photo_form {
-	margin-left: 13%;
-	margin-right: 13%;
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
-	padding: 2%;
+	padding: 1%;
 	h1 {
 		margin-bottom: 15px;
 	}
@@ -135,4 +137,39 @@
 	.edit_property_images {
 		clear: both;
 	}
+}
+
+.new_background_wrapper:not(.new_background) {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 10;
+	.new_background {
+		background: white;
+		width: 300px;
+		height: 150px;
+		margin-top: -100px;
+		margin-left: -175px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		padding: 25px;
+		.field {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 17px;
+		}
+	}
+}
+.property_index_backgrounds img:hover{
+	opacity: 0.5;
+	cursor: pointer;
 }

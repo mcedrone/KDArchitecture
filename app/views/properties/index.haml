@@ -1,2 +1,36 @@
 - content_for :title, 'Dashboard'
+.new_background_wrapper.hidden
+	.new_background
+		.close= link_to 'Close', '#', id: 'close_add_background'
+		%h3.centered Add Background
+		= form_for @photo, remote: true do |f|
+			.field
+				= f.label "Select Page:"
+				= f.select :page_id, options_for_select(Photo::PAGE_IDS.each_with_index.map {|name, index| [name,index]})
+			.field
+				= f.file_field :filename, required: true
+			.field.centered= f.submit 'Add Background!'
+
 = render partial: 'navbar'
+.dashboard
+	.dashboard_top
+		%h2.left Background Images
+		.right= link_to 'Add Background', '#', id: 'add_background', class: 'github_button green_gh_btn'
+	%hr
+	.property_index_backgrounds
+		.right (Click to delete background)
+		%h3 Home Page Backgrounds:
+		- @home_bgs.each do |bg|
+			= link_to (image_tag "#{bg.filename}", height: '100px'), bg, confirm: 'Do you want to delete this background?', method: :delete
+		%h3 About Background:
+		- if @about_bg
+			= link_to (image_tag "#{@about_bg.try(:filename)}", height: '100px'), @about_bg, confirm: 'Do you want to delete this background?', method: :delete
+		%h3 Recognition Background:
+		- if @recognition_bg
+			= link_to (image_tag "#{@recognition_bg.try(:filename)}", height: '100px'), @recognition_bg, confirm: 'Do you want to delete this background?', method: :delete
+		%h3 Affiliates Background:
+		- if @affiliates_bg
+			= link_to (image_tag "#{@affiliates_bg.try(:filename)}", height: '100px'), @affiliates_bg, confirm: 'Do you want to delete this background?', method: :delete
+		%h3 Contact Background:
+		- if @contact_bg
+			= link_to (image_tag "#{@contact_bg.try(:filename)}", height: '100px'), @contact_bg, confirm: 'Do you want to delete this background?', method: :delete

@@ -10,7 +10,6 @@
 			= link_to 'New Property', new_property_path(category_id: @category_id), title: 'New Property', class: 'github_button green_gh_btn'
 	%hr
 	- @properties.each do |property|
-		%hr
 		= property.name
 		= link_to 'Edit', edit_property_path(property), title: 'Edit Property', class: 'github_button'
 		%br
@@ -19,3 +18,4 @@
 			- cover = property.photos.first
 			-if cover
 				.edit_property_image= image_tag "#{cover.filename}", height: '200px'
+		%hr

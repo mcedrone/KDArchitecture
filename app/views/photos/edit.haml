@@ -1,0 +1,15 @@
+- content_for :title, "Edit #{@photo.name}"
+= render partial: 'properties/navbar'
+.edit_photo_form
+	.right= link_to 'Delete Photo', @photo, confirm: 'Are you sure you want to delete this photo?', method: :delete
+	%h1.centered= "Edit #{@photo.name}"
+	= form_for @photo do |f|
+		.field.centered
+			= image_tag "#{@photo.filename}", height: '100px'
+		.field
+			= f.text_field :name, value: @photo.name, placeholder: 'Name'
+		.field
+			= f.text_area :description, value: @photo.description, placeholder: 'Enter Description'
+		.field.centered
+			= f.hidden_field :property_id, value: @photo.property_id
+			= f.submit 'Save Photo'

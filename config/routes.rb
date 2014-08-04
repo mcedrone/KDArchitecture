@@ -1,5 +1,7 @@
 Kda::Application.routes.draw do
 
+  resources :photos
+
   resources :properties do
     collection do
       get  :edit_architecture
