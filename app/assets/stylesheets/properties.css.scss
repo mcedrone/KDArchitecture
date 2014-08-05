@@ -173,3 +173,39 @@
 	opacity: 0.5;
 	cursor: pointer;
 }
+
+
+#property_show_div {
+	text-align: center;
+}
+
+.current_image {
+	display: inline-block;
+}
+
+.prev_image, .next_image {
+	display: inline-block;
+	position: absolute;
+	height: 650px;
+	line-height: 650px;
+	width: 30px;
+	cursor: pointer;
+}
+.prev_image {
+	margin-left: -30px;
+}
+
+#current_photo_viewer img {
+	display: inline-block;
+}
+
+#photos_scroll {
+	margin-top: 20px;
+	.property_image {
+		display: inline-block;
+	}
+	.property_image:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+}

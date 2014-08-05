@@ -1,4 +1,4 @@
--content_for :title, 'Works In Progress'
+- content_for :title, @property.name
 .property_viewer_wrap{style: 'height: 100%'}
 	%ul.menu.black_menu
 		.menu_logo
@@ -10,6 +10,17 @@
 		%li= link_to 'Renovations', '/renovations'
 		%li= link_to 'Additions', '/additions'
 		%li= link_to 'Works In Progress', '/works_in_progress'
+
+	#property_show_div
+		#current_photo_viewer
+			- cover_photo = @property.photos.first
+			.image_container
+				.prev_image{title: 'Previous Image'} <
+				.current_image= image_tag "#{cover_photo.filename}", height: '500px', data: {id: cover_photo.id}, title: cover_photo.description
+				.next_image{title: 'Next Image'} >
+		#photos_scroll
+			- @property.photos.each do |photo|
+				.property_image= image_tag "#{photo.filename}", height: '70px', data: {id: photo.id}, title: photo.name
 
 / %footer.black_footer
 / 	%ul#footer_menu
