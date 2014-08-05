@@ -1,5 +1,5 @@
 -content_for :title, 'About'
-%ul.menu.black_menu
+%ul.menu.black_menu.absolute
 	.menu_logo
 		= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
 		%br
@@ -10,7 +10,7 @@
 	%li= link_to 'Additions', '/additions'
 	%li= link_to 'Works In Progress', '/works_in_progress'
 
-#about_div
+#about_div.absolute
 	Duckham Architecture & Interiors is a Boston based firm specializing in architecture and interior design for custom residences. Since our inception in 1996, we have designed homes that reflect our reverence for traditional architecture and our committment to creating a collaborative working relationship with our clients.
 	%br
 	%br

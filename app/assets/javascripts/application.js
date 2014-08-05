@@ -69,11 +69,11 @@ var ready = function(){
 	});
 	
 	//show list in edit views
-	$('.dashboard .container').on('click', '#list_view_icon', function(){
+	$('.dashboard_top').on('click', '.list_view_icon', function(){
 		$('.full_view_div').slideUp(700);
 	});
 	//show icons in edit views
-	$('.dashboard .container').on('click', '#images_view_icon', function(){
+	$('.dashboard_top').on('click', '.images_view_icon', function(){
 		$('.full_view_div').slideDown(700);
 	});
 

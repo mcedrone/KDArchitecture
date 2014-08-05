@@ -124,3 +124,12 @@ footer.white_footer {
 		color: gold;
 	}
 }
+
+#about_div, #recognition_div, #affiliates_div, #contact_div {
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 400px;
+	margin-left: -250px;
+	margin-top: -200px;
+}

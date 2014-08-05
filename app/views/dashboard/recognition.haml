@@ -10,8 +10,8 @@
 	%li= link_to 'Additions', '/additions'
 	%li= link_to 'Works In Progress', '/works_in_progress'
 
-#recognition_div
-
+#recognition_div.absolute
+	Hey!
 %ul#recognition_background
 	-if @bg_image
 		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'

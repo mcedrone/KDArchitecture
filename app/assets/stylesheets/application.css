@@ -73,7 +73,8 @@ a:hover {
 	width: 100%;
 }
 
-ul#slideshow, ul#about_background {
+ul#slideshow, ul#about_background, ul#recognition_background, 
+ul#affiliates_background, ul#contact_background {
 	display: block;
 	position: relative;
 	left: 0;
@@ -85,7 +86,8 @@ ul#slideshow, ul#about_background {
 	margin: 0;
 }
 
-ul#slideshow li, ul#about_background li {
+ul#slideshow li, ul#about_background li, ul#recognition_background li,
+ul#affiliates_background li, ul#contact_background li {
 	display: block;
 	list-style: none;
 	position: absolute;
