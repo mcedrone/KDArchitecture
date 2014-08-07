@@ -1,27 +1,29 @@
 -content_for :title, 'About'
-%ul.menu.black_menu.absolute
-	.menu_logo
-		= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
-		%br
-		ARCHITECTURE & INTERIORS
-	%li= link_to 'Architecture', '/architecture'
-	%li= link_to 'Interior Design', '/interior_design'
-	%li= link_to 'Renovations', '/renovations'
-	%li= link_to 'Additions', '/additions'
-	%li= link_to 'Works In Progress', '/works_in_progress'
-
-#about_div.absolute
-	Duckham Architecture & Interiors is a Boston based firm specializing in architecture and interior design for custom residences. Since our inception in 1996, we have designed homes that reflect our reverence for traditional architecture and our committment to creating a collaborative working relationship with our clients.
-	%br
-	%br
-	Our architecture and interior design practices are centered around the philosophy that successful living spaces combine a focus on richly articulated detail and an in-depth knowledge of quality construction techniques.
-	%br
-	%br
-	The architectural design team is lead by Kent Duckham, principal. Kent’s leadership and experience is evident in all aspects of the home design and building process. The interior design team is lead by Alina Duckham, who brings sophisticated design and classic style to both collaborative and independent projects.
-
-%ul#about_background
+%ul.about_background.fixed
 	-if @bg_image
 		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'
+.wrapper.table
+	%ul.menu.black_menu{style: 'display: table-row;'}
+		.menu_logo{style: 'width: 90%; margin-left: 5%; margin-right: 5%; padding-top: 10px;'}
+			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			%br
+			ARCHITECTURE & INTERIORS
+		%li= link_to 'Architecture', '/architecture'
+		%li= link_to 'Interior Design', '/interior_design'
+		%li= link_to 'Renovations', '/renovations'
+		%li= link_to 'Additions', '/additions'
+		%li= link_to 'Works In Progress', '/works_in_progress'
+
+	.content
+		Duckham Architecture & Interiors is a Boston based firm specializing in architecture and interior design for custom residences. Since our inception in 1996, we have designed homes that reflect our reverence for traditional architecture and our committment to creating a collaborative working relationship with our clients.
+		%br
+		%br
+		Our architecture and interior design practices are centered around the philosophy that successful living spaces combine a focus on richly articulated detail and an in-depth knowledge of quality construction techniques.
+		%br
+		%br
+		The architectural design team is lead by Kent Duckham, principal. Kent’s leadership and experience is evident in all aspects of the home design and building process. The interior design team is lead by Alina Duckham, who brings sophisticated design and classic style to both collaborative and independent projects.
+
+	.push
 
 %footer.black_footer
 	%ul#footer_menu

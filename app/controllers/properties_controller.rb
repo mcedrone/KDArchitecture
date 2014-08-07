@@ -60,23 +60,19 @@ class PropertiesController < ApplicationController
 	end
 
 	def interior_design
-		@properties = Property.where(category_id: 0)
+		@properties = Property.where(category_id: 1)
 	end
 
 	def renovations
-		@properties = Property.where(category_id: 0)
+		@properties = Property.where(category_id: 2)
 	end
 
 	def additions
-		@properties = Property.where(category_id: 0)
+		@properties = Property.where(category_id: 3)
 	end
 
 	def works_in_progress
-		@properties = Property.where(category_id: 0)
-	end
-
-	def edit_architecture
-		@properties = Property.where(category_id: 0)
+		@properties = Property.where(category_id: 4)
 	end
 
   def edit_architecture

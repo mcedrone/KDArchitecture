@@ -1,20 +1,24 @@
 -content_for :title, 'Recognition'
-%ul.menu.black_menu.absolute
-	.menu_logo
-		= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
-		%br
-		ARCHITECTURE & INTERIORS
-	%li= link_to 'Architecture', '/architecture'
-	%li= link_to 'Interior Design', '/interior_design'
-	%li= link_to 'Renovations', '/renovations'
-	%li= link_to 'Additions', '/additions'
-	%li= link_to 'Works In Progress', '/works_in_progress'
-
-#recognition_div.absolute
-	Hey!
-%ul#recognition_background
+%ul.recognition_background.fixed
 	-if @bg_image
 		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'
+
+.wrapper.table
+	%ul.menu.black_menu{style: 'display: table-row;'}
+		.menu_logo{style: 'width: 90%; margin-left: 5%; margin-right: 5%; padding-top: 10px;'}
+			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			%br
+			ARCHITECTURE & INTERIORS
+		%li= link_to 'Architecture', '/architecture'
+		%li= link_to 'Interior Design', '/interior_design'
+		%li= link_to 'Renovations', '/renovations'
+		%li= link_to 'Additions', '/additions'
+		%li= link_to 'Works In Progress', '/works_in_progress'
+
+	.content
+		Hey!
+
+	.push
 
 %footer.black_footer
 	%ul#footer_menu

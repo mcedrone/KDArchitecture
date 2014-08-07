@@ -39,6 +39,14 @@
 	z-index: 1;
 }
 
+.fixed {
+	position: fixed;
+}
+
+.table {
+	display: table;
+}
+
 hr {
 	width: 100%;
 	margin-top: 15px;
@@ -66,34 +74,4 @@ a:hover {
 	color: gold;
 	background-color: none;
 	background: none;
-}
-
-.main_container {
-	height: 100%;
-	width: 100%;
-}
-
-ul#slideshow, ul#about_background, ul#recognition_background, 
-ul#affiliates_background, ul#contact_background {
-	display: block;
-	position: relative;
-	left: 0;
-	top: 0;
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
-ul#slideshow li, ul#about_background li, ul#recognition_background li,
-ul#affiliates_background li, ul#contact_background li {
-	display: block;
-	list-style: none;
-	position: absolute;
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
