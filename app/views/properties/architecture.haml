@@ -2,7 +2,7 @@
 .wrapper
 	%ul.menu.black_menu
 		.menu_logo
-			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), '/'
 			%br
 			ARCHITECTURE & INTERIORS
 		%li= link_to 'Architecture', '/architecture'
@@ -16,12 +16,13 @@
 			- cover_photo = property.photos.first
 			- if cover_photo
 				.cover_photo_container
-					= link_to (image_tag "#{cover_photo.filename}", size: '250x175'), property, title: property.name
+					= link_to (image_tag "#{cover_photo.filename}", size: '240x180'), property, title: property.name
 
 	.push
 
 %footer.black_footer
 	%ul#footer_menu
+	.top_bah
 	%li= link_to 'About', "/about"
 	%li= link_to 'Recognition', "/recognition"
 	%li= link_to 'Affiliates', "/affiliates"

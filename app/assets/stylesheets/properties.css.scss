@@ -209,3 +209,20 @@
 		cursor: pointer;
 	}
 }
+
+#property_viewer_div {
+	width: 980px;
+	margin: auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	padding-bottom: 1px;
+	margin-bottom: 25px;
+	img:hover {
+		opacity: 0.5;
+	}
+}
+.cover_photo_container {
+	width: 240px;
+	display: inline-block;
+	padding: 1px;
+}

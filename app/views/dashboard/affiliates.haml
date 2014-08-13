@@ -4,23 +4,38 @@
 		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'
 
 .wrapper.table
-	%ul.menu.black_menu{style: 'display: table-row;'}
+	%ul.menu.white_menu{style: 'display: table-row;'}
 		.menu_logo{style: 'width: 90%; margin-left: 5%; margin-right: 5%; padding-top: 10px;'}
-			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			= link_to (image_tag 'duck_logo_white.png', width: '125px;'), root_path
 			%br
 			ARCHITECTURE & INTERIORS
-		%li= link_to 'Architecture', '/architecture'
-		%li= link_to 'Interior Design', '/interior_design'
-		%li= link_to 'Renovations', '/renovations'
-		%li= link_to 'Additions', '/additions'
-		%li= link_to 'Works In Progress', '/works_in_progress'
+		.menu_links{style: 'width: 90%; margin-left: 5%; margin-right: 5%;'}
+			%li= link_to 'Architecture', '/architecture'
+			%li= link_to 'Interior Design', '/interior_design'
+			%li= link_to 'Renovations', '/renovations'
+			%li= link_to 'Additions', '/additions'
+			%li= link_to 'Works In Progress', '/works_in_progress'
 
-	.affilates_content
-		Hey!
+	.content
+		Duckham Architecture & Interiors salutes their affiliates and values the dynamic partnerships that make their residence designs possible. With these affiliates, Duckham utilizes the most experienced, creative and knowledgeable consultants and resources available in the process of crafting superior custom homes.
+		%br
+		.affiliates_list
+			%h3 Affiliates
+			= link_to 'Pastiche of Cape Cod', 'http://www.pasticheofcapecod.com', target: '_blank'
+			%br
+			= link_to 'Gregory Lombardi Design', 'http://www.lombardidesign.com', target: '_blank'
+			%br
+			= link_to 'Cataldo Custom Builders Inc.', 'http://www.cataldobuilders.com', target: '_blank'
+			%br
+			= link_to 'Local Leaders', 'http://www.localleaders.com', target: '_blank'
+			%br
+			= link_to 'Southern New England Home', 'http://www.southernnehome.com', target: '_blank'
+			%br
+			= link_to 'Cape Code Magazine', 'http://www.capecodmagazine.com', target: '_blank'
 
 	.push
 
-%footer.black_footer
+%footer.white_footer
 	%ul#footer_menu
 	.top_bah
 	%li= link_to 'About', "/about"

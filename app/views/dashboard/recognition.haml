@@ -4,23 +4,24 @@
 		%li= image_tag "#{@bg_image.filename}", height: '100%', width: '100%'
 
 .wrapper.table
-	%ul.menu.black_menu{style: 'display: table-row;'}
+	%ul.menu.white_menu{style: 'display: table-row;'}
 		.menu_logo{style: 'width: 90%; margin-left: 5%; margin-right: 5%; padding-top: 10px;'}
-			= link_to (image_tag 'duck_logo_black.png', width: '125px;'), root_path
+			= link_to (image_tag 'duck_logo_white.png', width: '125px;'), root_path
 			%br
 			ARCHITECTURE & INTERIORS
-		%li= link_to 'Architecture', '/architecture'
-		%li= link_to 'Interior Design', '/interior_design'
-		%li= link_to 'Renovations', '/renovations'
-		%li= link_to 'Additions', '/additions'
-		%li= link_to 'Works In Progress', '/works_in_progress'
+		.menu_links{style: 'width: 90%; margin-left: 5%; margin-right: 5%;'}
+			%li= link_to 'Architecture', '/architecture'
+			%li= link_to 'Interior Design', '/interior_design'
+			%li= link_to 'Renovations', '/renovations'
+			%li= link_to 'Additions', '/additions'
+			%li= link_to 'Works In Progress', '/works_in_progress'
 
 	.content
 		Hey!
 
 	.push
 
-%footer.black_footer
+%footer.white_footer
 	%ul#footer_menu
 	.top_bah
 	%li= link_to 'About', "/about"
